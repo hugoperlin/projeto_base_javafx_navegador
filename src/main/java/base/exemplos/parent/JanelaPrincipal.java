@@ -46,11 +46,11 @@ public class JanelaPrincipal{
 
 
     private void mudarTela1(ActionEvent evt){
-        App.pushScreen(new Tela1().getRoot());
+        App.pushScreen("TELA1");
     }
 
     private void mudarTela2(ActionEvent evt){
-        App.pushScreen(new Tela2().getRoot());
+        App.pushScreen("TELA2");
     }
 
 

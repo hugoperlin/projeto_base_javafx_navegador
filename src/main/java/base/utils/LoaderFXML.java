@@ -1,4 +1,4 @@
-package br.com.hugoperlin.navegador_javafx.utils;
+package base.utils;
 
 import java.io.IOException;
 import java.net.URL;
@@ -8,10 +8,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.util.Callback;
 
-public class LoaderFxml {
-    
-
-    public static Parent load(URL fxml, Callback controlerMaker){
+public class LoaderFXML {
+        /**
+     * Método que permite carregar um fxml.
+     * 
+     * @param fxml Localização do arquivo fxml. Geralmente está dentro da pasta resources do projeto.
+     * @param controlerMaker Função anônima para criar um controlador da janela.
+     * @return
+     */
+    public static Parent loadFxml(URL fxml, Callback controlerMaker){
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(fxml);
@@ -26,6 +31,7 @@ public class LoaderFxml {
             Platform.exit();
         }
         return null;
-        
     }
+
+
 }
